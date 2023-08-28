@@ -1,0 +1,26 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+
+
+<div class="body">
+    <div *ngFor="let computer of computers" class="container">
+        <div class="image-section">
+            <img [src]="computer.type.images[0]?.url" alt="Product Image" class="product-image img-thumbnail">
+        </div>
+        <div class="text-content">
+            <span>{{computer.type.category}}</span><br>
+            <span>{{"Price :Rp " + computer.type.prices[0]?.price + " /H"}}</span>
+            <p>Specification :
+                {{computer.specification.monitor}},
+                {{computer.specification.processor}},
+                {{computer.specification.vga}}
+            </p>
+            <p>
+                Name : {{ computer.name }} <br>
+                Code : {{ computer.code }}
+            </p>
+            <button class="btn">Booking</button>
+        </div>
+    </div>
+</div>

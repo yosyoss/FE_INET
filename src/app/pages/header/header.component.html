@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<div class="body">
+  <img [src]="imgSrc" [alt]="imgAlt" class="card-img-overlay img-position" id="background-image">
+  <div class="header">
+    <input type="checkbox" name="" id="check1">
+    <div class="logo"><h1>Ari.NET</h1></div>
+    <div class="search-box">
+      <form action="">
+        <input type="text" name="search" id="search" placeholder="Search..">
+        <button type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <ul>
+      <li><a routerLink='/home'>Home</a> </li>
+      <li><a routerLink='product'>Order</a> </li>
+      <li><a routerLink='contact'>Contact</a> </li>
+      <li>
+        <a href=""><i class="fab fa-twitter"></i></a>
+        <a href=""><i class="fab fa-instagram"></i></a>
+      </li>
+      <li class="dropdown">
+        <a> <i class="fa fa-user-circle"></i></a>
+        <div class="dropdown-content">
+          <a href='home'>Profile</a>
+          <a routerLink='' (click)="logout()">Logout</a>
+        </div>
+      </li>
+    </ul>
+    <div class="menu">
+      <label for="check1">
+        <i class="fa fa-bars"></i>
+      </label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.profile-card{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(90deg, #450762, #e82197);
+    padding: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #000000;
+    transition: .6s;
+    margin: 0 25px;
+    animation: TopSlide 1s ease forwards;
+    opacity: 0;
+    animation-delay: .2s;
+}
+
+@keyframes TopSlide {
+    0%{
+        transform: translateY(200px);
+        opacity: 0;
+        filter: blur(5px);
+    }
+    100%{
+        transform: translateY(00px);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.profile-card:hover {
+    border-radius: 10px;
+    height: 260px;
+}
+.profile-card .profile{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+    z-index: 99;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #262626;
+    transition: .6s;
+}
+.profile-card:hover .profile{
+    transform: translateY(-90px);
+}
+.profile-card:hover img{
+    border-radius: 10px;
+}
+
+.caption{
+    text-align: center;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: .6s;
+}
+
+.profile-card:hover .caption{
+    opacity: 1;
+}
+
+.caption h3{
+    font-size: 25px;
+}
+
+.caption p{
+    font-size: 17px;
+    color: #07a4b2;
+    font-weight: bold;
+}
+.social-link a{
+    color: #262626;
+    font-size: 21px;
+    transition: .6s;
+}
+i{
+    margin-top: 10px;
+}
+
+.social-link a:hover{
+    color: #07a4b2;
+}

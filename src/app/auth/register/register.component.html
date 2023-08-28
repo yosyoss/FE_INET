@@ -1,0 +1,49 @@
+<div class="container">
+    <img [src]="imgSrc" [alt]="imgAlt" class="card-img-overlay img-position" id="background-image">
+    <div class="register-container">
+        <div class="center-container">
+            <div class="register-card transparent-card">
+                <div class="pt-4 pb-2">
+                    <ul class="ul">
+                        <li>R</li>
+                        <li>E</li>
+                        <li>G</li>
+                        <li>I</li>
+                        <li>S</li>
+                        <li>T</li>
+                        <li>E</li>
+                        <li>R</li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="register-box">
+                        <form [formGroup]="registerForm" (ngSubmit)="onRegister(registerForm.value)">
+                            <div class="user-box">
+                                <input class="form-control mt-lg-5" formControlName="email" id="email" type="email" placeholder="Input email here" required>
+                                <label class="email-col mt-md-3" for="email">Email</label>
+                            </div>
+                            <div class="user-box">
+                                <input class="form-control mt-5" formControlName="password" id="password" type="password" placeholder="Input password here" required>
+                                <label class="password-col mt-3" for="password">Password</label>
+                            </div>
+                            <button type="submit" class="register-btn">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Register
+                            </button>
+                            <button class="register-btn mb-5" (click)="goBack()">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Cancel
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
